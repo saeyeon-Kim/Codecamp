@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework</title>
+    <link rel="stylesheet" href="./homework.css" />
+    <script src="./homework.js"></script>
+  </head>
+  <body>
+    <div class="first-img">
+      <div class="header">
+        <div class="header-content">
+          <div class="header-content-left">
+            <img src="./icons/left.png" alt="left" />
+            <img src="./icons/right.png" alt="right" />
+            <img src="./icons/time.png" alt="time" />
+          </div>
+          <div class="header-content-right">
+            <div class="input-area">
+              <img src="./icons/search.png" alt="search-icon" />
+              <input type="text" placeholder="수강생을 검색해 보세요." />
+            </div>
+            <div class="info-area">
+              <div class="info-area-name">
+                <img src="./icons/logo_codecamp.png" alt="logo" />
+                <div class="name">수강생</div>
+              </div>
+              <div class="info-area-vector">
+                <img src="./icons/Vector.png" alt="vector" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu-bar">
+        <div class="menu-icons">
+          <img src="./img/채널 이미지.png" alt="channel" class="channel-icon" />
+          <div class="icons">
+            <img src="./icons/home.png" alt="home" class="home-icon" />
+            <div>홈</div>
+          </div>
+          <div class="icons">
+            <img src="./icons/message.png" alt="message" class="menu-icon" />
+            <div>대화</div>
+          </div>
+          <div class="icons">
+            <img src="./icons/notifi.png" alt="notification" class="menu-icon" />
+            <div>알림</div>
+          </div>
+          <div class="icons">
+            <img src="./icons/mark.png" alt="mark" class="menu-icon" />
+            <div>북마크</div>
+          </div>
+          <div class="icons">
+            <img src="./icons/more.png" alt="more" class="more-icon" />
+            <div>더 보기</div>
+          </div>
+        </div>
+        <div class="profile-menu">
+          <img src="./icons/add.png" alt="add" />
+          <img src="./img/내 프로필_A.png" alt="" />
+        </div>
+      </div>
+      <div class="second-img">
+        <img src="./img/일러스트 이미지 마스크.png" alt="mask" />
+      </div>
+      <div class="channel-area">
+        <div class="channel-title">
+          <div class="channel-title-left">코드캠프</div>
+          <div class="channel-title-right">
+            <img src="./icons/filter.png" alt="filter" class="filter-icon" />
+            <img src="./icons/edit.png" alt="edit" />
+          </div>
+        </div>
+        <div class="contract-btn-area">
+          <button class="contract-btn">서약서 자세히 보기</button>
+        </div>
+        <hr />
+        <div class="channel-list">
+          <div class="channel01">
+            <div class="channel01-left">
+              <img src="./icons/channel-code.png" alt="channel-code" />
+              <div>코드캠프 13기</div>
+            </div>
+            <div class="channel01-right">수강중</div>
+          </div>
+          <div class="channel02">
+            <div class="channel02-up">
+              <div class="channel02-left">
+                <img src="./icons/group.png" alt="group" />
+                <div>수강생 리스트</div>
+              </div>
+              <div class="channel02-right">
+                <img src="./icons/down.png" alt="down" />
+              </div>
+            </div>
+            <div id="members" class="channel02-down">
+              <div id="member" class="no-member">
+                <div>현재 가입한 멤버가 없어요.</div>
+                <div>회원가입 해보세요.</div>
+              </div>
+              <button id="access-btn">가입하기</button>
+            </div>
+          </div>
+          <div class="channel03">
+            <div class="channel03-up">
+              <div class="channel03-left">
+                <img src="./icons/channel_list.png" alt="channellist" />
+                <div>채널</div>
+              </div>
+              <div class="channel03-right">
+                <img src="./icons/down.png" alt="down" />
+              </div>
+            </div>
+            <div class="channel03-down">
+              <div># 채널 1</div>
+              <div># 채널 2</div>
+              <div># 채널 3</div>
+              <div># 채널 4</div>
+            </div>
+          </div>
+          <div class="channel04">
+            <img src="./icons/chadan.png" alt="차단" />
+            <div>차단 멤버 리스트</div>
+          </div>
+        </div>
+      </div>
+      <div class="sign-up-area">
+        <div class="sign-up-title">
+          <div>코드캠프에 가입하고</div>
+          <div>개발자로 커리어 점프 하세요.</div>
+        </div>
+        <div class="sign-up-fill">
+          <div class="signup-name">
+            <div>이름</div>
+            <input id="name-input" type="text" placeholder="이름을 입력해 주세요." />
+          </div>
+          <div class="email">
+            <div>이메일</div>
+            <input id="email-input" type="text" placeholder="네이버,구글,한메일,카카오 계정만 입력" />
+          </div>
+          <div class="pw">
+            <div>비밀번호</div>
+            <input id="pw-input" type="text" placeholder="비밀번호를 입력해 주세요." />
+          </div>
+          <div class="number">
+            <div class="number-inputs">
+              <div>전화번호</div>
+              <input id="num-input" type="text" placeholder="010으로 시작, '-'를 꼭 입력해 주세요." />
+            </div>
+            <div class="auth-number">
+              <div class="auth-up">
+                <div id="auth"></div>
+                <button onclick="requestauth()">인증번호 요청</button>
+              </div>
+              <div class="auth-down">
+                <div id="time"></div>
+                <button onclick="change_text()" id="auth_change" disabled>인증 하기</button>
+              </div>
+            </div>
+          </div>
+          <div class="intro">
+            <div>자기소개</div>
+            <textarea id="intro-input" placeholder="자기소개를 입력해 주세요."></textarea>
+          </div>
+          <div class="gender">
+            <div class="gender-name">성별</div>
+            <div class="gender-radio">
+              <div class="radio"><input type="radio" name="gender" id="man" /> <label for="man">남성</label></div>
+              <div class="radio"><input type="radio" name="gender" id="woman" /> <label for="woman">여성</label></div>
+            </div>
+          </div>
+          <div class="agree">
+            <input type="checkbox" />
+            집에는 씻으러만 가는데 동의합니다.
+          </div>
+          <div class="signup-btn">
+            <button onclick="access()" disabled>가입</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

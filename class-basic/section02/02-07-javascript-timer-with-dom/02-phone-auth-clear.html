@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>phone-auth</title>
+    <script>
+      let 철수의상자;
+      function 인증번호요청기능() {
+        clearInterval(철수의상자);
+        const 랜덤한숫자 = Math.random();
+        console.log(랜덤한숫자);
+
+        const 여섯자리숫자 = Math.floor(랜덤한숫자 * 1000000);
+        console.log(여섯자리숫자);
+
+        const 인증번호 = String(여섯자리숫자).padStart(6, "0");
+        console.log(인증번호);
+        document.getElementById("인증번호보여주는곳").innerHTML = `
+                <div>${인증번호}</div>
+              `;
+
+        let 시간 = 179;
+        철수의상자 = setInterval(function () {
+          const 분 = String(Math.floor(시간 / 60)).padStart(2, "0");
+          const 초 = String(시간 % 60).padStart(2, "0");
+          document.getElementById("시간보여주는곳").innerHTML = `
+          <div>${분}:${초}</div>
+          `;
+          시간 -= 1;
+        }, 1000);
+        // clearInterval을 사용해서 두번 눌렀을 때 처음꺼를 지우고 다시 시작하게 만드는 방법
+      }
+    </script>
+  </head>
+  <body>
+    <div id="인증번호보여주는곳"></div>
+    <button id="버튼" onclick="인증번호요청기능()">인증번호 요청하기</button>
+    <div id="시간보여주는곳">03:00</div>
+  </body>
+</html>

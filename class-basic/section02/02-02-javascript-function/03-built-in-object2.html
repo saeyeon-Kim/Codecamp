@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>내장객체실습</title>
+    <script>
+      function 인증번호요청() {
+        const 랜덤한숫자 = Math.random();
+        console.log(랜덤한숫자);
+
+        const 여섯자리숫자 = Math.floor(랜덤한숫자 * 1000000);
+        console.log(여섯자리숫자);
+
+        const 인증번호 = String(여섯자리숫자).padStart(6, "0");
+        // padStart(): 앞자리 - 몇자리? 뒷자리 - 없으면 앞에 뭘로채워?
+        // 가끔 앞이 0인 경우 숫자면 0이 사라져서 5자리가 되기 때문에 문자열로 바꿔서 앞에 0을 채운다.
+        console.log(인증번호);
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="인증번호요청()">인증번호요청</button>
+  </body>
+</html>

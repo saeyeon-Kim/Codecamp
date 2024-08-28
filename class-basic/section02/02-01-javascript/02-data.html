@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>다양한 데이터 저장실습</title>
+    <script>
+      // 1. 변수
+      let myname = "철수";
+      myname = "영희";
+      console.log(myname);
+
+      const yourname = "철수";
+      // yourname = '영희'
+      console.log(yourname);
+
+      // 2. 변수의 계산
+      const 철수돈 = 1000;
+      const 영희돈 = 5000;
+      const 총합계 = 철수돈 + 영희돈;
+      console.log(총합계);
+
+      const 철수돈2 = "1000";
+      const 영희돈2 = "5000";
+      const 총합계2 = 철수돈2 + 영희돈2;
+      console.log(총합계2);
+
+      const 철수돈3 = "1000";
+      const 영희돈3 = 5000;
+      const 총합계3 = 철수돈3 + 영희돈3;
+      console.log(총합계3);
+
+      // 3. 객체에 저장하기
+      const 학생증1 = {
+        name: "철수",
+        age: 12,
+        school: "다람쥐초",
+      };
+
+      const 학생증2 = {
+        name: "짱구",
+        age: 11,
+        school: "토끼초",
+      };
+
+      const 학생증3 = {
+        name: "맹구",
+        age: 13,
+        school: "공룡초",
+      };
+      console.log(학생증1.name);
+      console.log(학생증1.age);
+      console.log(학생증1.school);
+
+      // 4. 배열에 저장하기
+      const 사탕바구니 = ["포도맛", "딸기맛"];
+      const 학생증목록 = [학생증1, 학생증2];
+
+      사탕바구니.push("박하맛"); // push: 끝에 추가
+      console.log(사탕바구니);
+
+      학생증목록.push(학생증3);
+      console.log(학생증목록);
+
+      console.log(학생증목록.length);
+      console.log(학생증목록[0]);
+
+      const 마지막번호 = 학생증목록.length - 1;
+      console.log(학생증목록[마지막번호]);
+
+      // 5. 배열 안의 겍체애서 꺼내기
+      console.log(학생증목록[0].age);
+    </script>
+  </head>
+  <body></body>
+</html>

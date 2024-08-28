@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이미지 실습</title>
+  <style>
+    .강아지배경이미지 {
+      width: 250px;
+      height: 250px;
+      background-image: url(./00-dog.jpg);
+      background-size: contain;
+    }
+  </style>
+</head>
+<body>
+  <!-- 자식을 만들수 없어서 이미지에 뭔가 넣을수없음 -->
+  <img src="00-dog.jpg" alt="dog" width="250px" >
+  <!-- 자식을 넣을수 있어서 이미지에 뭔가 넣을수있음 -->
+  <div class="강아지배경이미지">
+    <span>배경이미지 안에는 다른것들 올릴 수 있음</span>
+    <button>버튼</button>
+  </div>
+</body>
+</html>

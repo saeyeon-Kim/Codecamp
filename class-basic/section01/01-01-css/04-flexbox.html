@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flexbox실습</title>
+  <style>
+    .우리동네 {
+      width: 500px;
+      height: 500px;
+      background-color: aqua;
+      display: flex;
+      /* justify-content: center; */
+      justify-content: space-between;
+      /* align-items: center; */
+      align-items: flex-end;
+    }
+    .철수네집 {
+      width: 150px;
+      height: 150px;
+      background-color: yellow;
+    }
+    .짱구네집 {
+      width: 150px;
+      height: 150px;
+      background-color: pink;
+    }
+  </style>
+</head>
+<body>
+  <div class="우리동네">
+    <div class="철수네집">철수네집</div>
+    <div class="짱구네집">짱구네집</div>
+  </div>
+</body>
+</html>

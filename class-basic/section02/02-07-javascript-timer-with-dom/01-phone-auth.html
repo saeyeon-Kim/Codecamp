@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>phone-auth</title>
+    <script>
+      function 인증번호요청기능() {
+        const 랜덤한숫자 = Math.random();
+        console.log(랜덤한숫자);
+
+        const 여섯자리숫자 = Math.floor(랜덤한숫자 * 1000000);
+        console.log(여섯자리숫자);
+
+        const 인증번호 = String(여섯자리숫자).padStart(6, "0");
+        console.log(인증번호);
+        document.getElementById("인증번호보여주는곳").innerHTML = `
+                <div>${인증번호}</div>
+              `;
+      }
+      function 타이머() {
+        let 시간 = 179;
+        setInterval(function () {
+          const 분 = Math.floor(시간 / 60);
+          const 초 = 시간 % 60;
+          시간 -= 1;
+          document.getElementById("시간보여주는곳").innerHTML = `
+          <div>${분}:${초}</div>
+          `;
+        }, 1000);
+        document.getElementById("버튼").disabled = true;
+        document.getElementById("버튼").style = "color:red";
+        // 버튼을 두번 눌렀을때 타이머가 두번실행되는 오류를 disabled를 통해 두번은 누를 수 없게 막는 방법
+      }
+    </script>
+  </head>
+  <body>
+    <div id="인증번호보여주는곳"></div>
+    <button id="버튼" onclick="타이머(); 인증번호요청기능()">인증번호 요청하기</button>
+    <div id="시간보여주는곳">3:00</div>
+  </body>
+</html>
